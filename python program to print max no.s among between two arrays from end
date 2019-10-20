@@ -1,0 +1,18 @@
+m,n=map(int,input().split(' '))
+l1=list(map(int,input().split(' ')))[::-1]
+l2=list(map(int,input().split(' ')))[::-1]
+if(m!=n):
+    mini=min(m,n)
+    for i in range(mini):
+        print(max(l1[0],l2[0]),end=' ')
+        l1.pop(0)
+        l2.pop(0)
+    if(len(l1)!=0):
+        for i in range(len(l1)):
+            print(l1[i],end=' ')
+    else:
+        for i in range(len(l2)):
+            print(l2[i],end=' ')
+else:
+    for i in range(m):
+        print(max(l1[i],l2[i]),end=' ')
