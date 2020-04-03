@@ -1,7 +1,0 @@
-import math
-ins=int(input())
-fs=int(input())
-n=fs/ins
-i=(math.log(n,10))/2.303
-j=(math.log(1.25,10))/2.303
-print(math.ceil(i/j))
