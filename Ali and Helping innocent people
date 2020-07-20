@@ -1,0 +1,23 @@
+s1,s2=input().split('-')
+s1=list(s1)
+s2=list(s2)
+f=1
+if ((int(s2[0])+int(s2[1]))%2!=0):
+    f=0
+else:
+    for i in s1:
+        if ord(i)>64 and ord(i)<91 and i in 'AEIOUY':
+            f=0
+            break
+        elif ord(i)>64 and ord(i)<91 and i not in 'AEIOUY':
+            s3=s1[:s1.index(i)]
+            s4=s1[s1.index(i)+1:]
+            if(int(s3[0])+int(s3[1]))%2!=0:
+                f=0
+            else:
+                for i in range(len(s4)-1):
+                    if(int(s4[i])+int(s4[i+1]))%2!=0:
+                        f=0
+                        break
+print(f==1 and 'valid' or 'invalid')
+        
